@@ -12,8 +12,8 @@ def tag(name, *content, class_=None, **attrs):
     else:
         return f'<{name}{attr_str} />'
 
-print('1: A single positional argument produces an empty tag with that name.')
 print('def tag(name, *content, class_=None, **attrs):')
+print('1: A single positional argument produces an empty tag with that name.')
 print(tag('br'))
 print('2: Any number of arguments after the first are captured by *content as a tuple')
 print(tag('p', 'hello'))
@@ -28,6 +28,6 @@ print(tag(content='testing', name='img'))
 print('6: Prefixing the my_tag dict with ** passes all its items as separate arguments,'
       'which are then bound to the named parameters, with the remaining caught by '
       '**attrs.')
-my_tag = {'name': 'img', 'title': 'Sunset Boulevard', 'src': 'sunset.jpg', 'class':'framed'}
+my_tag = {'name': 'img', 'title': 'Sunset Boulevard', 'src': 'sunset.jpg', 'class_':'framed'}
 print(tag(**my_tag))
 
